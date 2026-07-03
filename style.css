@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Inter;
+    src: url(".fonts/Inter-VariableFont_opsz,wght.ttf");
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#works {
+    border-radius: 10px;
+    border-color: #ffffff;
+    border-width: 10px;
+    inline-size: 550px;
+    margin-block-end: 1em;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+.bio {
+}
+p {
+}
