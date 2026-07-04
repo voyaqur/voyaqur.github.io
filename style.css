@@ -1,77 +1,154 @@
 @font-face {
-	font-family: Inter;
-	src: url(".fonts/Inter-VariableFont_opsz,wght.ttf");
+    font-family: Inter;
+    src: url(".fonts/Inter-VariableFont_opsz,wght.ttf");
+}
+* {
+    box-sizing: border-box;
 }
 
 body {
-	font-family: "Inter", sans-serif;
-	background-color: black;
-	color: white;
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
 }
 main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 90px;
+    padding: 10px;
 }
 
 #works {
-	border-radius: 10px;
-	border-color: #ffffff;
-	border-width: 10px;
-	inline-size: 550px;
-	margin-block-end: 1em;
-	overflow-wrap: break-word;
-	hyphens: manual;
-	margin-bottom: 1em;
+    border-radius: 10px;
+    border-color: #ffffff;
+    border-width: 10px;
+    inline-size: 650px;
+    margin-block-end: 1em;
+    overflow-wrap: break-word;
+    hyphens: manual;
 }
 
 #bio {
 }
 
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 section > h3:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 article {
-	margin-bottom: 10em;
 }
 legend {
-	text-decoration: bold;
+    text-decoration: bold;
+}
+#favorite {
+    border-radius: 10px;
+    border-color: #ffffff;
+    border-width: 10px;
+    inline-size: 650px;
+    margin-block-end: 1em;
+    overflow-wrap: break-word;
+    hyphens: manual;
 }
 progress {
-	accent-color: black;
-	transform-origin: left;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    accent-color: black;
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.ascii {
-	font-family: "Courier New", Courier, monospace;
-	white-space: pre;
-	padding: 10px;
-	line-height: 0.9; /* Adjust based on art density */
-	color: midnightblue;
+#ascii {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1; /* Adjust based on art density */
+    color: #dad7e2;
 }
 .navbar {
     position: fixed;
-    top: 0;
+    top: 0%;
     width: 100%;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.1);
-
+    height: 40px;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 25px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
 
-    padding: 5px;
+    padding: 10px 10px 10px 10px;
     z-index: 1000;
 }
+@keyframes unbold-effect {
+    0% {
+        font-weight: normal;
+        border: 1px solid;
+    }
+    100% {
+        font-weight: bold;
+        border: 0px;
+    }
+}
+kbd {
+    background-color: #1b1b1c;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 2px 4px;
+    color: white;
+    /* Initial shadow creates a 3D "raised" look */
+    box-shadow: 0 2px 0 #b4b4b4;
 
-padding from e.g., 1rem to 0.25rem or 0.5rem */
-p: 0.25rem;
-ttom: 0.25rem;
+    /* Smooth transition for the press effect */
+    font-weight: bold;
+    /* Ensure it reacts to clicks */
+    cursor: pointer;
+    user-select: none;
+}
+kbd:active {
+    transform: translateY(2px);
+    animation: unbold-effect 1s ease-in;
+    box-shadow: none;
+}
 
-no large margins are pushing the height */
+#copyright-notice {
+    margin: 10em 0 10em 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-logo {
+    display: block;
 
+    margin-left: auto;
+    margin-right: auto;
 
-xbox for tight alignment */
-lex;
-s: center;
+    margin-bottom: 10px;
+}
 
+.title {
+    color: white;
+    font-weight: bold;
+}
+
+.title > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-content {
+    display: flex;
+    gap: 25px;
+}
+.nav-content > a {
+    text-decoration: none;
+    color: inherit;
+}

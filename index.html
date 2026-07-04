@@ -7,10 +7,17 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-<h2>Cao Nguyen Minh Khoi <progress id="pseudo"> </progress></h2>
+        <nav class="navbar">
+            <span class="title">
+                <a href="https://voyaqur.github.io">Cao Nguyen Minh Khoi</a>
+            </span>
+            <span class="nav-content">
+                <a href="https://voyaqur.github.io/blog.html">Blogs</a>
+            </span>
+        </nav>
         <main>
             <section>
-                <pre class="ascii">
+                <pre id="ascii" style="pointer-events: none; user-select: none">
                                   ..
      ...     ..             u.    @L                                     x.    .        .u    .
   :~""888h.:^"888:    ...ue888b  9888i   .dL        u         .u@u     .@88k  z88u    .d88B :@8c
@@ -26,15 +33,20 @@ X888n. 8888X  ?888>   888R I888>   888E  888I .@88 "8888" .888  9888    8888  88
          ""**""                       ./"                        '8
                                      ~`                           `
                 </pre>
-                </pre>
             </section>
             <section>
-				<fieldset>
-					<legend>Cao Nguyen Minh Khoi</legend>
-                	<blockquote>
-						<p>High School Senior Student</p>
-                	</blockquote>
-				</fieldset>
+                <div
+                    style="
+                        background-color: #2d2d2d;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 2px 15px 2px 15px;
+                        border-radius: 8px; /* This creates the rounded corners */
+                        font-family: sans-serif;
+                    "
+                >
+                    <p>When there's a gold rush ...sell shovels</p>
+                </div>
             </section>
             <article>
                 <section id="works">
@@ -42,33 +54,24 @@ X888n. 8888X  ?888>   888R I888>   888E  888I .@88 "8888" .888  9888    8888  88
                     <p>
                         Khoi is a high school senior student based in Ho Chi
                         Minh City with a goal of getting into Computer Science
-at <abbr title="Vietnam National University - Ho Chi Minh">VNU-HCM</abbr> (<abbr title="HCM University of Information Technology">UIT</abbr>, <abbr title="HCM University of Science">HCMUS</abbr>).
-						He like to use Linux, especially <a href="https://archlinux.org/">Arch Linux</a> distribution, and
-                        tinkering with his 10 years old machine. He is currently
-                        in preparation for his university.
+                        at
+                        <abbr title="Vietnam National University - Ho Chi Minh"
+                            >VNU-HCM</abbr
+                        >
+                        (<abbr title="HCM University of Information Technology"
+                            >UIT</abbr
+                        >,
+                        <abbr title="HCM University of Science">HCMUS</abbr>).
+                        He like to use Linux, especially
+                        <a href="https://archlinux.org/">Arch Linux</a>
+                        distribution, and tinkering with his 10 years old
+                        machine. He is currently in preparation for his
+                        university.
                     </p>
                 </section>
-                <hr>
+                <hr />
                 <section id="bio">
-					<h3>Biography</h3>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>2009</th>
-                                <td>Born in Ho Chi Minh City, Vietnam.</td>
-                            </tr>
-                            <tr>
-                                <th>2024</th>
-                                <td>Started Go Vap High School.</td>
-                            </tr>
-                            <tr>
-                                <th>2027</th>
-                                <td>Started ???.</td>
-                            </tr>
-                        </tbody>
-</table>
-<section id="bio">
-					<h3>Biography</h3>
+                    <h3>Biography</h3>
                     <table>
                         <tbody>
                             <tr>
@@ -85,11 +88,25 @@ at <abbr title="Vietnam National University - Ho Chi Minh">VNU-HCM</abbr> (<abbr
                             </tr>
                         </tbody>
                     </table>
-
                 </section>
-				            </article>
-            <img src="./white-logo.svg" alt="Brainmade logo" width="200px" height="100px">
-            <footer>
+                <hr />
+                <section id="favorite">
+                    <h3>I Love</h3>
+                    <p>
+                        Competitive programming, Computing, Calculus, Linux,
+                        Discrete Mathematics, Probability and Statistics,
+                        Electronic Musics.
+                    </p>
+                </section>
+            </article>
+            <footer id="copyright-notice">
+                <img
+                    src="./white-logo.svg"
+                    alt="Brainmade logo"
+                    width="100px"
+                    height="50px"
+                    class="footer-logo"
+                />
                 <small>
                     &#169; 2026 Cao Nguyen Minh Khoi. All Rights Reserved.
                 </small>
