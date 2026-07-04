@@ -23,9 +23,18 @@ main {
     margin-block-end: 1em;
     overflow-wrap: break-word;
     hyphens: manual;
+    margin-bottom: 1em;
 }
 
 .bio {
+    margin-bottom: 10em;
 }
 p {
+}
+.ascii {
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre;
+    padding: 10px;
+    line-height: 0.9; /* Adjust based on art density */
+    color: midnightblue;
 }
