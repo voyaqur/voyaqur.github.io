@@ -50,3 +50,28 @@ progress {
 	line-height: 0.9; /* Adjust based on art density */
 	color: midnightblue;
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+    padding: 5px;
+    z-index: 1000;
+}
+
+padding from e.g., 1rem to 0.25rem or 0.5rem */
+p: 0.25rem;
+ttom: 0.25rem;
+
+no large margins are pushing the height */
+
+
+xbox for tight alignment */
+lex;
+s: center;
+
