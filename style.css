@@ -144,9 +144,28 @@ kbd:active {
 
 .nav-content {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 25px;
 }
-.nav-content > a {
+
+a {
     text-decoration: none;
     color: inherit;
+    font-size: 18px;
+}
+.selected {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 3px 6px 3px 6px;
+    color: black;
+
+    text-decoration: bold;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
