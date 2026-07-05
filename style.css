@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+:root {
+    --background-color: black;
+}
 * {
     box-sizing: border-box;
 }
@@ -15,7 +17,6 @@ main {
     flex-direction: column;
     justify-content: center;
     margin-top: 90px;
-    padding: 10px;
 }
 
 #works {
@@ -28,28 +29,10 @@ main {
     hyphens: manual;
 }
 
-#bio {
-}
-
-@keyframes gradient-shift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 section > h3:hover {
     text-decoration: underline;
 }
-article {
-}
-legend {
-    text-decoration: bold;
-}
+
 #favorite {
     border-radius: 10px;
     border-color: #ffffff;
@@ -79,7 +62,7 @@ progress {
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 25px;
+    gap: 18px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
 
@@ -110,18 +93,20 @@ kbd {
     /* Ensure it reacts to clicks */
     cursor: pointer;
     user-select: none;
-}
-kbd:active {
-    transform: translateY(2px);
-    animation: unbold-effect 1s ease-in;
-    box-shadow: none;
+    &:active {
+        transform: translateY(2px);
+        animation: unbold-effect 1s ease-in;
+        box-shadow: none;
+    }
 }
 
-#copyright-notice {
-    margin: 10em 0 10em 0;
+footer#copyright-notice {
+    margin: 10em 0 2em 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    user-select: none;
+    pointer-events: none;
 }
 .footer-logo {
     display: block;
@@ -135,18 +120,22 @@ kbd:active {
 .title {
     color: white;
     font-weight: bold;
-}
-
-.title > a {
-    text-decoration: none;
-    color: inherit;
+    & > a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 .nav-content {
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    flex-direction: right;
+}
+.nav-content:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -168,4 +157,20 @@ a {
     display: flex;
     align-items: center;
     gap: 5px;
+    padding: 2px 2px;
+    background-color: transparent; /* No box visible by default */
+    text-decoration: none;
+    &#github:hover {
+        width: fit-content;
+        border-radius: 3px;
+        border: 1px solid #f0f0f0; /* Change #444 to your desired border color */
+    }
+}
+
+img#mylogo {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: rotate(30deg);
+    }
 }

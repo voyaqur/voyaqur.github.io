@@ -5,10 +5,23 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+        <style>
+            em div{
+              color: blue;
+            }
+            div + p {
+                color: purple
+            }
+            span ~ p {
+                            color: red
+                        }
+
+        </style>
     </head>
     <body>
         <nav class="navbar">
-            <span class="title">
+            <span class="title nav-content">
+                <img src="src/logos/mylogo.svg" width="25px" height="25px" alt ="Voyaqur logo"id = "mylogo"/>
                 <a href="index.html">Cao Nguyen Minh Khoi</a>
             </span>
             <span class="nav-content">
@@ -20,16 +33,18 @@
         </nav>
         <main id="content">
             <p><kbd>CTRL</kbd>+<kbd>R</kbd></p><main>
-
+                <p>pre div</p>
+                <div> ++++++++++ lol <em>fuck</em> <small>fuck <em>fuck</em> </small></div>
+                <p>post div</p>
+                <p>post div 2</p>
+                <p> pre span</p>
+                <span> ~~~~~~~~~~~~~~~~~~~~ lol </span>
+                <p>post span</p>
+                <p>post span 1</p>
+                <p>post span 2</p>
+                <p>post span 3</p>
         <footer id="copyright-notice">
-            <img
-                src="src/logos/white-logo.svg"
-                alt="Brainmade logo"
-                width="100px"
-                height="50px"
-                class="footer-logo"
-            />
-            <small>
+            <small style="color: #2d2d2d;">
                 &#169; 2026 Cao Nguyen Minh Khoi. All Rights Reserved.
             </small>
         </footer>

@@ -1,2 +1,5 @@
 # voyaqur.github.io
-My info page
+My portfolio page, made with plain HTML/CSS, no scripts.
+
+## Stack
+- none.
