@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
-    --background-color: black;
+    --bg-color: black;
 }
 * {
     box-sizing: border-box;
 }
-
+h1,
+h2,
+h3 {
+    font-size: clamp(1rem, 5vw, 2rem);
+}
 body {
     font-family: "Inter", sans-serif;
-    background-color: black;
+    background-color: #0a0a0a;
     color: white;
+    font-size: 1rem; /* Base size for paragraphs */
 }
 main {
     display: flex;
@@ -19,28 +24,31 @@ main {
     margin-top: 90px;
 }
 
-#works {
-    border-radius: 10px;
-    border-color: #ffffff;
-    border-width: 10px;
-    inline-size: 650px;
+section {
+    & > h3:hover {
+        text-decoration: underline;
+    }
+}
+
+#works,
+#favorite,
+#bio,
+#contact {
+    /* Change these two lines */
+    width: 90%; /* Allows it to shrink on small screens */
+    max-width: 550px; /* Stops it from getting too wide on desktop */
+
     margin-block-end: 1em;
     overflow-wrap: break-word;
     hyphens: manual;
-}
-
-section > h3:hover {
-    text-decoration: underline;
-}
-
-#favorite {
-    border-radius: 10px;
-    border-color: #ffffff;
-    border-width: 10px;
-    inline-size: 650px;
-    margin-block-end: 1em;
-    overflow-wrap: break-word;
-    hyphens: manual;
+    margin-left: auto; /* Keeps the container centered */
+    margin-right: auto;
+    & h3 {
+        margin-bottom: 1rem;
+    }
+    & p {
+        margin-top: 0;
+    }
 }
 progress {
     accent-color: black;
@@ -50,6 +58,7 @@ progress {
 #ascii {
     font-family: monospace;
     white-space: pre;
+    font-size: clamp(0.5rem, 2vw, 1rem);
     line-height: 1; /* Adjust based on art density */
     color: #dad7e2;
 }
@@ -133,6 +142,9 @@ footer#copyright-notice {
     align-items: center;
     justify-content: center;
     flex-direction: right;
+    & > p {
+        font-size: 1rem;
+    }
 }
 .nav-content:hover {
     text-decoration: underline;
@@ -173,4 +185,21 @@ img#mylogo {
     &:hover {
         transform: rotate(30deg);
     }
+}
+main section h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Creating the underline bar */
+main section h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    background-color: #555;
+    border-radius: 2px;
 }
