@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+    --bg-color: black;
+}
+* {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    font-size: 1rem; /* Base size for paragraphs */
+}
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+section {
+    & > h3:hover {
+        text-decoration: underline;
+    }
+}
+
+#works,
+#favorite,
+#bio,
+#contact {
+    /* Change these two lines */
+    width: 90%; /* Allows it to shrink on small screens */
+    max-width: 550px; /* Stops it from getting too wide on desktop */
+
+    margin-block-end: 1em;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin-left: auto; /* Keeps the container centered */
+    margin-right: auto;
+    & h3 {
+        margin-bottom: 1rem;
+    }
+    & p {
+        margin-top: 0;
+    }
+}
+progress {
+    accent-color: black;
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#ascii {
+    font-family: monospace;
+    white-space: pre;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    line-height: 1; /* Adjust based on art density */
+    color: #dad7e2;
+}
+.navbar {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 18px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+    padding: 10px 10px 10px 10px;
+    z-index: 1000;
+}
+@keyframes unbold-effect {
+    0% {
+        font-weight: normal;
+        border: 1px solid;
+    }
+    100% {
+        font-weight: bold;
+        border: 0px;
+    }
+}
+kbd {
+    background-color: #1b1b1c;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 2px 4px;
+    color: white;
+    /* Initial shadow creates a 3D "raised" look */
+    box-shadow: 0 2px 0 #b4b4b4;
+
+    /* Smooth transition for the press effect */
+    font-weight: bold;
+    /* Ensure it reacts to clicks */
+    cursor: pointer;
+    user-select: none;
+    &:active {
+        transform: translateY(2px);
+        animation: unbold-effect 1s ease-in;
+        box-shadow: none;
+    }
+}
+
+footer#copyright-notice {
+    margin: 10em 0 2em 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none;
+    pointer-events: none;
+}
+.footer-logo {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    & > a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.nav-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: right;
+    & > p {
+        font-size: 1rem;
+    }
+}
+.nav-content:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+.selected {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 3px 6px 3px 6px;
+    color: black;
+
+    text-decoration: bold;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 2px;
+    background-color: transparent; /* No box visible by default */
+    text-decoration: none;
+    &#github:hover {
+        width: fit-content;
+        border-radius: 3px;
+        border: 1px solid #f0f0f0; /* Change #444 to your desired border color */
+    }
+}
+
+img#mylogo {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: rotate(30deg);
+    }
+}
+main section h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Creating the underline bar */
+main section h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    background-color: #555;
+    border-radius: 2px;
+}
