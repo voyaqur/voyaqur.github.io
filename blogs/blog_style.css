@@ -164,27 +164,6 @@ a {
     text-decoration: bold;
 }
 
-.contact {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 2px 2px;
-    background-color: transparent; /* No box visible by default */
-    text-decoration: none;
-    &#github:hover {
-        width: fit-content;
-        border-radius: 3px;
-        border: 1px solid #f0f0f0; /* Change #444 to your desired border color */
-    }
-}
-
-img#mylogo {
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-        transform: rotate(30deg);
-    }
-}
 main section h3 {
     position: relative;
     display: inline-block;
